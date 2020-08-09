@@ -1,0 +1,25 @@
+select note.numE,etudiant.nomE,matiere.nomM,(note.note * matiere.coeff) as notefinal from note , matiere, etudiant where matiere.nomM=note.nomM and note.numE=etudiant.numE
+
+
+select matiere.nomM,note.note,matiere.coeff,(note.note * matiere.coeff) as points from note , matiere where matiere.nomM=note.nomM and note.numE=2
+
+
+
+select sum(matiere.coeff) as totalc from note , matiere where matiere.nomM=note.nomM and note.numE=2
+
+moyenne etud 2
+select (sum(note.note * matiere.coeff)/sum(matiere.coeff)) as points from note , matiere where matiere.nomM=note.nomM and note.numE=2
+
+med moyenne
+select matiere.nomM,note.note,matiere.coeff,(note.note * matiere.coeff) as points,(sum(note.note * matiere.coeff)/sum(matiere.coeff)) as moyenn from note , matiere where matiere.nomM=note.nomM and note.numE=2
+
+
+select etudiant.numE,etudiant.nomE,classe.idC, (sum(note.note * matiere.coeff)/sum(matiere.coeff)) as moiyenne from note , matiere ,etudiant ,classe where matiere.nomM=note.nomM and classe.idC=etudiant.idC
+
+select etudiant.numE,etudiant.nomE, matiere.nomM,note.note, (note.note * matiere.coeff) as points from etudiant, note , matiere where matiere.nomM=note.nomM and note.numE=2 ORDER BY 
+`etudiant`.`idC` ASC
+
+
+
+
+select etudiant.numE,etudiant.nomE,classe.idN ,classe.idC from etudiant ,classe where etudiant.numE=2 and classe.idC=etudiant.idC

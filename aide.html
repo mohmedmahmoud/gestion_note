@@ -1,0 +1,99 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="aide.css">
+
+
+</head>
+<body>
+
+<h1 class="title">Gestion de Note<br>
+Ajouter</h1>
+<div class="codepen-container">
+<div id="icetab-container">
+    	<div class="icetab current-tab"> Etudiant</div><div class="icetab">classe</div><div class="icetab"> matiere</div> <div class="icetab"> Niveau</div>   <div class="icetab"> Note</div>      
+    </div>
+    
+    <div id="icetab-content" class="container">
+    	<div class="tabcontent tab-active">
+		<form method="post" action="insert_etu.php">
+<label>numero</label>
+<input type="text" id="num" name="num" placeholder="Votre numero.." >
+
+<label>Nom</label>
+<input type="text" id="nom" name="nom" placeholder="Votre nom.." required>
+
+
+<label>classe</label>
+<input type="text" id="nom" name="classe" placeholder="Votre classe.." required>
+
+<input type="submit" value=" " title="envoyer" >
+<br>
+</form>
+</div> 
+        <div class="tabcontent"><form method="post" action="ajouteclasse.php">
+	<label>classe</label>
+<input type="text" id="nom" name="classe" placeholder="Votre classe.." required>
+<label>niveau</label>
+<input type="text" id="num" name="niveau" placeholder="niveau.." required>
+<input type="submit" value="">
+<br>
+</form></div>
+         <div class="tabcontent">
+		 <form method="post" action="ajoute-matiere.php">
+	<label>Nom Matiere</label>
+<input type="text" id="nom" name="matiere" placeholder="MATIERE.." required>
+<label>Coefficient</label>
+<input type="text" id="nom" name="coeff" placeholder="COEFF.." required>
+<label>Niveau</label>
+<input type="text" id="num" name="niveau" placeholder="niveau.." required>
+<input type="submit" value="" title="envoyer">
+<br>
+</form></div>
+
+<div class="tabcontent">
+<form method="post" action="ajouteniveau.php">
+<label>niveau</label>
+<input type="text" id="num" name="niveau" placeholder="niveau.." required>
+<input type="submit" value="">
+<br>
+</form></div>
+<div class="tabcontent">
+<form method="post" action="insert_note.php">
+<label>Numero</label>
+<input type="text" id="num" name="num" placeholder="numero id.." required>
+
+<label>Matiere<label>
+<input type="text" id="matiere"name="matiere" placeholder=" matiere-niveau"required>
+<label>Niveau</label>
+<input type="text" id="niveau" name="niveau" placeholder="niveau.." required>
+
+<label>Note</label>
+<input type="number"  name="note" max="20" min="0" placeholder="note matiere" required>
+
+
+<input type="submit" value="" title="envoyer">
+<br>
+</form><div>
+    </div>
+<script>
+var tabs = document.getElementById('icetab-container').children;
+var tabcontents = document.getElementById('icetab-content').children;
+
+var myFunction = function() {
+	var tabchange = this.mynum;
+	for(var int=0;int<tabcontents.length;int++){
+		tabcontents[int].className = ' tabcontent';
+		tabs[int].className = ' icetab';
+	}
+	tabcontents[tabchange].classList.add('tab-active');
+	this.classList.add('current-tab');
+}	
+
+
+for(var index=0;index<tabs.length;index++){
+	tabs[index].mynum=index;
+	tabs[index].addEventListener('click', myFunction, false);
+}
+</script>	
+		</body>
+		</html>

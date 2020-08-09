@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="etu.css">
+</head>
+<body>
+<div class="container">
+<h3>Ajouter une note</h3>
+<form method="post" action="insert_note.php">
+<label>Numero</label>
+<input type="text" id="num" name="num" placeholder="numero id.." required>
+
+<label>Matiere<label>
+<input type="text" id="matiere"name="matiere" placeholder=" matiere-niveau"required>
+<label>Niveau</label>
+<input type="text" id="niveau" name="niveau" placeholder="niveau.." required>
+
+<label>Note</label>
+<input type="number"  name="note" max="20" min="0" placeholder="note matiere" required>
+
+
+<input type="submit" value="" title="envoyer">
+<br>
+</form>
+</div>
+</body>
+</html>

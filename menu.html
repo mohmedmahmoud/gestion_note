@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="menu.css">
+
+</head>
+ 
+ 
+ <body>
+ <div class="search">
+<form method="post"  target="main_page" action="cher_etu_result.php">
+
+<input type="search" id="nom" name="nom" placeholder="chercher">
+</div>
+ 
+ <div class="wrapper">
+        <ui class="mainMenu">
+		<li class="item">
+                <a href="frameset.html" target="main_page" class="btn"><i class="fas fa-sign-out-alt"></i>ACCUEIL</a>
+            </li>
+            <li class="item" id="account">
+                <a href="#account" class="btn"><i class="fas fa-user-circle"></i>ETUDIANT</a>
+                <div class="subMenu">
+                    <a href="frameset.html"  target="main_page">Ajouter Un Etudiant</a>
+					<a href="farmeset-liste-etu.HTML"  target="main_page">liste Des Etudiants</a>
+                  <a href="freleveNote.html"  target="main_page"> Releve De Note</a>
+					
+					
+                </div>
+            </li>
+            <li class="item" id="about">
+                <a href="#about" class="btn"><i class="fas fa-address-card"></i>LISTE</a>
+                <div class="subMenu">
+                    
+                    <a href="fliste_classe.html"  target="main_page">liste des classe</a>
+					<a href="listeniveau.php"  target="main_page">liste des niveaux</a>
+					<a href="listematiere.php.php"  target="main_page">liste des matiere</a>
+                </div>
+            </li>
+            <li class="item" id="support">
+                <a href="#support" class="btn"><i class="fas fa-info"></i>NOTE</a>
+                <div class="subMenu">
+                    <a href="fnoteclasse.html"  target="main_page">note par classe</a>
+					<a href="farmeset-ajout-note.html"  target="main_page">Ajouter une note</a>
+                </div>
+            </li>
+			<li class="item" id="supportt">
+			
+                <a href="#supportt" class="btn"><i class="fas fa-info"></i>AUTRE</a>
+				<div class="subMenu">
+				 <a href="ajouteniveau.html"  target="main_page">Ajouter un Niveau</a>
+                    <a href="ajouteclasse.html" target="main_page">Ajouter une classe</a>
+					<a href="ajoutematiere.html"  target="main_page">Ajouter une matiere</a>
+                  </div>  
+                
+            </li>
+			
+            <li class="item">
+                <a href="index.html" target="main_page" class="btn"><i class="fas fa-sign-out-alt"></i>DECONNECTION</a>
+            </li>
+        </ui>
+    </div>
+
+
+
+
+</body>
+</html>
